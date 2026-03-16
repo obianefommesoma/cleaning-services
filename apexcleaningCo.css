@@ -1,0 +1,1185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    z-index: 10;
+    color: white;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover{
+    color: #71d44e;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid white;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+     url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+
+.hero-content {
+    max-width: 600px;
+    color: white;
+}
+
+h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.green-text {
+    color: #71d44a; /* Vibrant green from the image */
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 450px;
+    color: #f0f0f0;
+}
+
+/* Button Styling */
+.btn-book {
+    background-color: #71d44a;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    display: inline-block;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn-book:hover {
+    background-color: #5eb53d;
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+    .hamburger {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    .nav-links a {
+        margin: 0;
+        padding: 0.5rem 1rem;
+        border-bottom: none;
+    }
+    .contact-info {
+        display: none;
+    }
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .description {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+    .btn-book {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 80px 10%;
+    background-color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sub-title {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.green-text {
+    color: #4CAF50;
+}
+
+.intro-text {
+    color: #777;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Layout Wrapper */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Services List (Left) */
+.services-list {
+    flex: 1;
+    min-width: 300px;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.icon-check {
+    background-color: #4CAF50;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.service-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.service-item p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Image Grid (Right) */
+.image-grid {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    min-width: 350px;
+}
+
+.image-grid img {
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.img-small {
+    width: 50%;
+    height: 380px;
+    margin-top: 20px;
+
+}
+
+.img-large {
+    width: 50%;
+    height: 380px;
+}
+
+.decorative-stars {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    color: #4CAF50;
+    font-size: 2rem;
+}
+
+
+
+
+
+/* our expertise */
+
+
+
+
+.cleaning-services-section {
+    padding: 100px 5%;
+    position: relative;
+
+    /* Soft mesh gradient background */
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(76, 175, 80, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(76, 175, 80, 0.08) 0px, transparent 50%);
+    background-attachment: fixed;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    padding: 80px 5%;
+    background-color: #fcfcfc;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-content {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.top-label {
+    color: #4CAF50;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.green-text {
+    color: #4CAF50; 
+}
+
+.intro-paragraph {
+    color: #7f8c8d;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Card Design */
+.service-card {
+    background: white;
+    border-radius: 20px;
+    padding: 0 0 25px 0;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.image-box {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* The small green play button in your image */
+.play-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #4CAF50;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+h3 {
+    margin: 0 20px 10px;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+p {
+    margin: 0 20px;
+    color: #777;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+
+/* the story section */
+
+
+.story-section {
+    padding: 80px 5%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.story-section .container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.story-section .story-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Image Side Styles */
+.story-section .story-image {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.story-section .story-image img {
+    width: 100%;
+    border-radius: 25px; 
+    box-shadow: 15px 15px 0px #f0fdf4; 
+    display: block;
+}
+
+.story-section .experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    background: #4CAF50; 
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Content Side Styles */
+.story-section .story-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.story-section .sub-title {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.story-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.story-section .green-text {
+    color: #4CAF50; 
+}
+
+.story-section .main-text {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Bullet Points */
+.story-section .feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.story-section .feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.story-section .feature-list li::before {
+    content: "●";
+    color: #4CAF50; 
+    font-size: 1.2rem;
+}
+
+/* Specific styling for the Story Section Button */
+.read-more-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #2c3e50; 
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px; 
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect to turn green like your branding */
+.read-more-btn:hover {
+    background-color: #4CAF50; 
+    transform: translateY(-3px); /* Lifts up slightly */
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+}
+
+
+
+/* Steps Section */
+
+/* Scoped Professional Steps Section */
+.steps-section {
+    padding: 100px 5%;
+    position: relative;
+    /* Adding a professional background image with an overlay */
+    background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), 
+                url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+.steps-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Enhanced Header */
+.steps-section .header {
+    margin-bottom: 80px;
+}
+
+.steps-section .badge {
+    color: #4CAF50;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.steps-section h2 {
+    font-size: 38px;
+    color: #1a2a24;
+    font-weight: 800;
+}
+
+.steps-section .green-text {
+    color: #4CAF50;
+}
+
+/* Staggered Grid Layout */
+.steps-section .steps-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* Modern Card Design */
+.steps-section .step-card {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Glass effect */
+    width: 270px;
+    border-radius: 25px; 
+    padding-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: visible; /* Allows step number to pop out slightly */
+}
+
+.steps-section .step-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(76, 175, 80, 0.15);
+    background: #ffffff;
+}
+
+
+.steps-section .step-card.stagger {
+    margin-top: 60px;
+}
+
+/* Image Container */
+.steps-section .image-area {
+    position: relative;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 20px; 
+}
+
+.steps-section .image-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.steps-section .step-card:hover .image-area img {
+    transform: scale(1.1);
+}
+
+/* Premium Step Circle */
+.steps-section .step-number {
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
+    background: #4CAF50;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 8px 15px rgba(76, 175, 80, 0.4);
+    border: 3px solid #ffffff;
+    z-index: 2;
+}
+
+.steps-section h3 {
+    padding: 25px 20px 10px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.steps-section p {
+    padding: 0 20px;
+    color: #555;
+}
+
+
+
+/* sparkle section */
+
+.sparkle-section {
+    padding: 80px 5%;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sparkle-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+/* Image Side */
+.sparkle-image {
+    flex: 1;
+    min-width: 380px;
+}
+
+.sparkle-image img {
+    width: 100%;
+    border-radius: 20px; 
+    box-shadow: 15px 15px 0px rgba(76, 175, 80, 0.1);
+    display: block;
+}
+
+/* Content Side */
+.sparkle-content {
+    flex: 1;
+    min-width: 380px;
+}
+
+.sparkle-content .sub-heading {
+    color: #4CAF50;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.sparkle-content h2 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin: 0 0 20px;
+    line-height: 1.2;
+}
+
+.sparkle-content .green-highlight {
+    color: #4CAF50;
+}
+
+.sparkle-content .intro-text {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Benefits List */
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.benefits-list .icon-circle {
+    background-color: #e8f5e9; 
+    color: #4CAF50;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    flex-shrink: 0; /* Prevents icon from shrinking */
+}
+
+.benefits-list h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.benefits-list p {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Action Button */
+.sparkle-content .action-button {
+    display: inline-block;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sparkle-content .action-button:hover {
+    background-color: #4CAF50; 
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .sparkle-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sparkle-image {
+        order: 2; /* Image below text on small screens */
+    }
+    .sparkle-content {
+        order: 1; /* Text above image on small screens */
+    }
+    .sparkle-content h2 {
+        font-size: 2.2rem;
+    }
+    .benefits-list {
+        text-align: left; 
+    }
+}
+
+
+
+
+/* Expert Team Section */
+
+.expert-team {
+    padding: 100px 5%;
+    background-color: #f4f7f6; 
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.expert-team .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Header */
+.team-header {
+    margin-bottom: 60px;
+}
+
+.team-header .badge {
+    color: #4CAF50; 
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.team-header h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin: 10px 0 20px;
+}
+
+.team-header .green-text {
+    color: #4CAF50;
+}
+
+.team-header .subtitle {
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Grid Layout */
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Professional Card Design */
+.team-card {
+    background: #ffffff;
+    width: 300px;
+    border-radius: 25px; 
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.team-card:hover {
+    transform: translateY(-12px); /* Interactive lift effect */
+    box-shadow: 0 20px 40px rgba(76, 175, 80, 0.15);
+}
+
+.image-container {
+    position: relative;
+    height: 350px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Green icon circle from reference */
+.status-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #4CAF50;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 3px solid #fff;
+}
+
+.info {
+    padding: 25px;
+}
+
+.info h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info p {
+    color: #4CAF50; 
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+
+/* Testimonials Section */
+
+.global-testimonials {
+    padding: 100px 5%;
+    position: relative;
+    background-color: #f9fbfb;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* World Map: Positioned behind everything */
+.map-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.08; 
+    z-index: 0;
+    pointer-events: none;
+}
+
+.global-testimonials .container {
+    position: relative;
+    z-index: 1; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.testimonial-header { text-align: center; margin-bottom: 50px; }
+.testimonial-header .badge { color: #4CAF50; font-weight: 700; letter-spacing: 2px; font-size: 14px; }
+.testimonial-header h2 { font-size: 38px; color: #1a2421; margin-top: 10px; }
+.green-text { color: #4CAF50; }
+
+/* Testimonial Cards */
+.testimonial-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    margin: 20px 5px;
+    border-left: 5px solid #4CAF50; 
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-mark { font-size: 50px; color: #eee; margin-bottom: -10px; font-family: Georgia, serif; }
+.review { font-style: italic; color: #555; line-height: 1.6; margin-bottom: 20px; font-size: 15px; }
+
+/* User Info */
+.user-profile { display: flex; align-items: center; gap: 15px; }
+.user-profile img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+.user-meta h4 { margin: 0; font-size: 17px; color: #333; }
+.stars { color: #f1c40f; font-size: 12px; }
+
+/* Swiper Dots */
+.swiper-pagination-bullet-active { background: #4CAF50 !important; }
+
+
+
+
+/* appointment section */
+
+.appointment-section {
+    padding: 80px 5%;
+    background-color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.appointment-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* Form Styling */
+
+
+.appointment-section { padding: 80px 5%; font-family: 'Segoe UI', sans-serif; }
+.appointment-container { 
+    display: flex; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; 
+    border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.booking-form-side { 
+    flex: 1.2; background: #0d2a21; padding: 50px; color: white; min-width: 350px; 
+}
+.green-highlight { color: #4CAF50; }
+.badge { color: #4CAF50; font-weight: bold; letter-spacing: 2px; font-size: 13px; }
+
+.form-row { display: flex; gap: 15px; margin-bottom: 10px; }
+.input-group { flex: 1; display: flex; flex-direction: column; position: relative; margin-bottom: 15px; }
+
+.schedule-form input, .schedule-form select {
+    width: 100%; padding: 14px; background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white; outline: none;
+}
+
+/* Error Styling */
+.error-text { 
+    color: #ff5e5e; font-size: 11px; margin-top: 4px; 
+    display: none; 
+}
+
+.input-group.invalid input { border-color: #ff5e5e; background: rgba(255, 94, 94, 0.05); }
+.input-group.invalid .error-text { display: block; }
+
+.submit-btn {
+    background: #4CAF50; color: white; border: none; padding: 16px 35px;
+    border-radius: 50px; font-weight: bold; cursor: pointer; margin-top: 15px;
+}
+
+.appointment-image-side { flex: 1; position: relative; min-width: 350px; }
+.appointment-image-side img { width: 100%; height: 100%; object-fit: cover; }
+.guarantee-banner { 
+    position: absolute; bottom: 0; width: 100%; background: #4CAF50; 
+    padding: 20px; text-align: center; color: white; 
+}
+
+.success-message { color: #4CAF50; display: none; margin-top: 15px; font-weight: bold; }
+
+
+/* Image & Banner Styling */
+.appointment-image-side {
+    flex: 1;
+    position: relative;
+    min-width: 400px;
+}
+
+.appointment-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.guarantee-banner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #4CAF50; 
+    padding: 25px;
+    text-align: center;
+    color: white;
+}
+
+.guarantee-banner h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .booking-form-side { padding: 40px 20px; }
+    .form-row { flex-direction: column; gap: 10px; }
+}
+
+/* Highlights invalid fields automatically */
+.schedule-form input:invalid:focus {
+    border-color: #ff4d4d;
+    outline: none;
+}
+
+.schedule-form input:valid:focus {
+    border-color: #4caf4f;
+}   
+
+
+
+/* Footer Styles */
+
+
+.main-footer {
+    background-color: #0d2a21; 
+    color: #ffffff;
+    padding: 80px 5% 40px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #4CAF50; 
+}
+
+.footer-logo { font-size: 28px; margin-bottom: 20px; }
+.green-text { color: #4CAF50; }
+.footer-desc { line-height: 1.6; color: #b0b0b0; margin-bottom: 20px; }
+
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col ul li { margin-bottom: 12px; }
+.footer-col ul li a { 
+    color: #b0b0b0; 
+    text-decoration: none; 
+    transition: 0.3s; 
+}
+
+.footer-col ul li a:hover { color: #4CAF50; padding-left: 5px; }
+
+.social-links a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #4CAF50;
+    transform: translateY(-3px);
+}
+
+.contact-item p { color: #b0b0b0; margin-bottom: 10px; font-size: 14px; }
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}
+
+
+
+
+
+
